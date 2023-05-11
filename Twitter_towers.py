@@ -41,14 +41,16 @@ def triangular_tower(height, base):
 
 
 def print_triangular_tower(height, base):
-    print("Please note: to print the triangular tower"
-          "the length and width of the triangle will be rounded to the nearest round number:\n"
-          f"Triangular tower height now is: {height}\n"
-          f"Triangular tower base width now is: {base}")
-
+    """
+    Prints a Twitter tower as required
+    """
     if base % 2 == 0 or base > 2 * height:
         print("Sorry, this triangle cannot be printed.")
     else:
+        print("Please note: to print the triangular tower"
+              "the length and width of the triangle will be rounded to the nearest round number:\n"
+              f"Triangular tower height now is: {height}\n"
+              f"Triangular tower base width now is: {base}")
         groups_in_body = math.ceil(base / 2) - 2
         if groups_in_body:  # if base > 3
             add_to_first_group = (height - 2) % groups_in_body
